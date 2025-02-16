@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 import {API_URL} from './utils/constant'
 import axios from 'axios'
 import React, { Component } from 'react'
+import "./App.css";
 
 export default class App extends Component {
   constructor(props) {
@@ -33,30 +34,30 @@ export default class App extends Component {
   render() {
     const {menus} = this.state
     return (
-      <div className="App">
-      <Navbarcomponent />
-      <div className="mt-3">
-      <Container fluid>
-        <Row>
-          <Col md={4}>
-            <List />
-          </Col>
-          <Col md={4}>
-            <h4>Daftar Produk</h4>
-            <hr />
+      <div>
+        <Navbarcomponent />
+        <div className="content">
+          <Container fluid>
             <Row>
-              {menus && menus.map((menu) => (
-                <Menu key={menu.id} menu={menu} />
-              ))}
+              <Col md={4}>
+                <List />
+              </Col>
+              <Col md={4}>
+                <h4>Daftar Produk</h4>
+                <hr />
+                <Row>
+                  {menus && menus.map((menu) => (
+                    <Menu key={menu.id} menu={menu} />
+                  ))}
+                </Row>
+              </Col>
+              <Col md={4}>
+                <Hasil />
+              </Col>
             </Row>
-          </Col>
-          <Col md={4}>
-            <Hasil />
-          </Col>
-        </Row>
-      </Container>
+          </Container>
+        </div>
       </div>
-    </div>
     )
   }
 }

@@ -1,0 +1,43 @@
+.navbar-custom {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #343a40;
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 3px solid #007bff; 
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: #007bff; 
+}
+
+.navbar-custom .nav-link {
+  color: #ffffff;
+  margin-right: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #007bff; 
+}
+
+.navbar-custom .nav-dropdown {
+  color: #ffffff;
+}
+
+.navbar-custom .nav-dropdown:hover {
+  color: #007bff; 
+}
+
+.navbar-custom .navbar-toggler {
+  border-color: #007bff; 
+}
