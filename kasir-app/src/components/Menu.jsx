@@ -4,12 +4,12 @@ import "../styling/menu.css";
 
 const Menu = ({ menu }) => {
   return (
-    <Col md={6} xs={6} className="mb-3">
+    <Col md={6} xs={8} className="mb-4">
       <Card className="card">
         <Card.Img
           variant="top"
           src={
-            'assets/image/' +
+            "assets/image/" +
             menu.category.nama.toLowerCase() +
             "/" +
             menu.gambar
@@ -18,7 +18,9 @@ const Menu = ({ menu }) => {
         <Card.Body>
           <Card.Title className="card-title">{menu.nama}</Card.Title>
           <Card.Text>
-            <p><strong>kode </strong>: {menu.kode}</p>
+            <p>
+              <strong>kode </strong>: {menu.kode}
+            </p>
           </Card.Text>
           <Card.Text>
             {new Intl.NumberFormat("id-ID", {

@@ -1,0 +1,12 @@
+.list-group-item {
+  display: flex;
+  align-items: center;
+}
+
+.category-name {
+  margin-right: 2px; 
+}
+
+.icon {
+  margin-left: 2px; 
+}
