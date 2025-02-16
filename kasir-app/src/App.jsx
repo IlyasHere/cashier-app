@@ -1,15 +1,12 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import { Navbarcomponent, List, Hasil } from "./components";
+import { Navbarcomponent, List, Hasil, Menu } from "./components";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import {API_URL} from './utils/constant'
 import axios from 'axios'
-
-
-
 import React, { Component } from 'react'
 
 export default class App extends Component {
@@ -34,7 +31,6 @@ export default class App extends Component {
    }
 
   render() {
-
     const {menus} = this.state
     return (
       <div className="App">
@@ -49,14 +45,10 @@ export default class App extends Component {
             <h4>Daftar Produk</h4>
             <hr />
             <Row>
-            {menus && menus.map((menu) => (
-              <Col key={menu.id}>
-                <img src={API_URL + 'image/' + menu.gambar} alt={menu.nama} className="img-fluid" />
-                <p>{menu.nama}</p>
-                <p>Rp. {menu.harga}</p>
-                </Col>
-                 ))}
-          </Row>
+              {menus && menus.map((menu) => (
+                <Menu key={menu.id} menu={menu} />
+              ))}
+            </Row>
           </Col>
           <Col md={4}>
             <Hasil />
